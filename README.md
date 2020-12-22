@@ -12,6 +12,8 @@ A study project at Practicum by Yandex to try various form elements.
 
 ## :link: Links to test
 
+https://dianadomino24.github.io/form-page-constructor/
+
 ---
 
 ## :rocket: Technologies
@@ -19,6 +21,8 @@ A study project at Practicum by Yandex to try various form elements.
 -   **JavaScript ES6** - Promises, setTimeOut.
 
 -   semantic **HTML5**, styles - **CSS3** including Flexbox.
+
+-   **Objected Oriented Programming** - classes.
 
 ---
 
