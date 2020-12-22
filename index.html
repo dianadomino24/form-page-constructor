@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Forms, page constructor</title>
+        <link
+            rel="stylesheet"
+            href="https://code.s3.yandex.net/web-code/normalize.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="page">
+            <section class="form">
+                <div class="form__toggle">
+                    <img
+                        class="form__toggle-image"
+                        src="https://pictures.s3.yandex.net/html-forms/close_icon.png"
+                    />
+                </div>
+                <div class="form__container">
+                    <form class="form__admin">
+                        <div class="form__main-container">
+                            <h2 class="form__heading">Set the parameters</h2>
+                            <fieldset
+                                class="form__input-container form__input-container_ctrl_texts"
+                            >
+                                <label for="heading" class="form__label"
+                                    >Title</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form__item form__item_el_heading"
+                                    id="heading"
+                                    name="heading"
+                                    placeholder="What&#39;s your article about?"
+                                    required
+                                />
+                                <label for="subheading" class="form__label"
+                                    >Subtitle</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form__item form__item_el_subheading"
+                                    id="subheading"
+                                    name="subheading"
+                                    placeholder="Summary"
+                                    required
+                                />
+                                <label for="main-text" class="form__label"
+                                    >Text</label
+                                >
+                                <textarea
+                                    class="form__item form__item_el_main-text"
+                                    id="main-text"
+                                    name="main-text"
+                                    placeholder="This is the article&#39;s text"
+                                    required
+                                ></textarea>
+                                <label for="email" class="form__label"
+                                    >E-mail</label
+                                >
+                                <input
+                                    type="email"
+                                    class="form__item form__item_el_email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="hello@example.com"
+                                />
+                            </fieldset>
+                            <div class="form__line"></div>
+                            <fieldset
+                                class="form__input-container form__input-container_ctrl_visual"
+                            >
+                                <label for="font-family" class="form__label"
+                                    >Font family</label
+                                >
+                                <select
+                                    class="form__item form__item_el_font-family"
+                                    id="font-family"
+                                    name="font-family"
+                                >
+                                    <option value="ibm">IBM Plex Serif</option>
+                                    <option value="ubuntu">Ubuntu</option>
+                                    <option value="istok">Istok Web</option>
+                                </select>
+                                <label
+                                    for="heading-font-size"
+                                    class="form__label"
+                                    >Title font size</label
+                                >
+                                <input
+                                    type="number"
+                                    min="24"
+                                    max="80"
+                                    class="form__item form__item_el_heading-fontsize"
+                                    id="heading-font-size"
+                                    name="heading-font-size"
+                                    value="32"
+                                />
+                                <label for="text-font-size" class="form__label"
+                                    >Text font size</label
+                                >
+                                <input
+                                    type="number"
+                                    min="12"
+                                    max="40"
+                                    class="form__item form__item_el_text-fontsize"
+                                    id="text-font-size"
+                                    name="text-font-size"
+                                    value="24"
+                                />
+                                <label for="pub-date" class="form__label"
+                                    >Date of publication</label
+                                >
+                                <input
+                                    type="date"
+                                    class="form__item form__item_el_pubdate"
+                                    id="pub-date"
+                                    name="pub-date"
+                                />
+                                <label for="image" class="form__label"
+                                    >Cover</label
+                                >
+                                <select
+                                    class="form__item form__item_el_image"
+                                    id="image"
+                                >
+                                    <option value="rink">Skating rink</option>
+                                    <option value="christmasTree">
+                                        Christmas tree
+                                    </option>
+                                    <option value="cup">
+                                        A cup of hot tea
+                                    </option>
+                                    <option value="house">A cozy house</option>
+                                </select>
+                            </fieldset>
+                            <fieldset
+                                class="form__input-container form__input-container_ctrl_additional"
+                            >
+                                <h3
+                                    class="form__heading form__heading_type_ctrl-el-heading"
+                                >
+                                    Number of colons
+                                </h3>
+                                <label
+                                    for="one-column"
+                                    class="form__label form__label_direction_right"
+                                >
+                                    <input
+                                        type="radio"
+                                        name="number-of-columns"
+                                        class="form__item form__item_el_number-of-columns"
+                                        id="one-column"
+                                        value="one-column"
+                                        checked
+                                    />
+                                    <span
+                                        class="form__pseudo-item form__pseudo-item_type_radio"
+                                    ></span>
+                                    <span class="form__label-text">1</span>
+                                </label>
+                                <label
+                                    for="two-columns"
+                                    class="form__label form__label_direction_right"
+                                >
+                                    <input
+                                        type="radio"
+                                        name="number-of-columns"
+                                        id="two-columns"
+                                        class="form__item form__item_el_number-of-columns"
+                                        value="two-columns"
+                                    />
+                                    <span
+                                        class="form__pseudo-item form__pseudo-item_type_radio"
+                                    ></span>
+                                    <span class="form__label-text">2</span>
+                                </label>
+                                <label for="text-color" class="form__label"
+                                    >Text color</label
+                                >
+                                <input
+                                    type="color"
+                                    class="form__item form__item_el_text-color"
+                                    id="text-color"
+                                    name="text-color"
+                                    value="#979797"
+                                />
+                                <label for="content-width" class="form__label"
+                                    >Content width</label
+                                >
+                                <input
+                                    type="range"
+                                    min="30"
+                                    max="80"
+                                    step="10"
+                                    class="form__item form__item_el_content-width"
+                                    id="content-width"
+                                    name="content-width"
+                                />
+                                <h3
+                                    class="form__heading form__heading_type_ctrl-el-heading"
+                                >
+                                    Additional parameters
+                                </h3>
+                                <label
+                                    for="black-background"
+                                    class="form__label form__label_direction_right"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="extra-option"
+                                        id="black-background"
+                                        class="form__item form__item_el_extra-options"
+                                        value="black-background"
+                                    />
+                                    <span
+                                        class="form__pseudo-item form__pseudo-item_type_checkbox"
+                                    ></span>
+                                    <span class="form__label-text"
+                                        >Black background</span
+                                    >
+                                </label>
+                                <br />
+                                <label
+                                    for="bold-heading"
+                                    class="form__label form__label_direction_right"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="extra-option"
+                                        class="form__item form__item_el_extra-options"
+                                        id="bold-heading"
+                                        value="bold-heading"
+                                        checked
+                                    />
+                                    <span
+                                        class="form__pseudo-item form__pseudo-item_type_checkbox"
+                                    ></span>
+                                    <span class="form__label-text"
+                                        >Bold title</span
+                                    >
+                                </label>
+                            </fieldset>
+                        </div>
+                        <fieldset class="form__handlers">
+                            <input type="submit" class="form__button" />
+                            <input type="reset" class="form__button" />
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+            <section class="content">
+                <div class="content__container">
+                    <header class="content__header">
+                        <h1 class="content__heading">O, kom er eens kijken</h1>
+                        <h2 class="content__subheading">
+                            From castles to ballet in your sitting room: 3
+                            things to do in December
+                        </h2>
+                    </header>
+                    <div class="content__image">
+                        <img
+                            class="content__image-item"
+                            src="https://www.dutchnews.nl/wpcms/wp-content/uploads/2018/02/Schaatsen_op_de_Hofvijver-RS-768x576.jpg"
+                        />
+                        <div class="content__image-copyright">
+                            Photo:
+                            <a
+                                class="content__link"
+                                href="https://www.dutchnews.nl/features/2020/12/from-castles-to-ballet-in-your-sitting-room-14-great-things-to-do-in-december/"
+                                target="_blank"
+                            >
+                                Marco Raaphorst </a
+                            >&nbsp; Skating on the Hofvijver in The Hague in
+                            2012.
+                        </div>
+                    </div>
+                    <div class="content__text">
+                        <p class="content__paragraph">
+                            Prepare for the Elfstedentocht. Skating rinks have
+                            been given the go ahead to open again, a great
+                            opportunity for children and adults to be active in
+                            the open air during the Christmas break (which may
+                            be longer than usual). There are skating lessons at
+                            the Jaap Edenbaan in Amsterdam and the Uithof in The
+                            Hague, curling classes at Rotterdam skating rink and
+                            unorganised messing about and falling on your bum at
+                            all three. Make sure you reserve your slot online.
+                            If you are more comfortable on solid ground but
+                            still want to be outdoors, try one of
+                            Staatsbosbeheer’s Christmas walks.
+                            <a
+                                class="content__link"
+                                href="https://www.dutchnews.nl/features/2020/12/from-castles-to-ballet-in-your-sitting-room-14-great-things-to-do-in-december/"
+                                target="_blank"
+                            >
+                                Read more at DutchNews.nl
+                            </a>
+                        </p>
+                        <p class="content__paragraph">
+                            Enjoy ballet classics live. Back to Classic, a
+                            programme of classical ballet favourites such as Le
+                            Corsaire, Swan Lake and Paquita, has extended its
+                            run to include three live stream performances in
+                            December. Performed by a different Opera Ballet cast
+                            each time, you can enjoy this live event for €12.50
+                            from the safety of your living room. December 4, 9,
+                            and 12.
+                        </p>
+                        <p class="content__paragraph">
+                            Come to the castle for Christmas. The Covid Grinch
+                            is not stealing all Christmas cheer this year: Slot
+                            Loevestein near Zaltbommel has reopened its doors to
+                            visitors who will be regaled with tales of knights
+                            in armour and Hugo de Groot and his book chest.
+                            There’s candle light, hot cocoa for the children and
+                            glühwein for mum and dad. It may even snow. From
+                            December 19 to January 3.
+                        </p>
+                    </div>
+                    <div class="content__date">22.12.2020</div>
+                    <div class="content__author">
+                        Feel free to contact me:
+                        <a
+                            class="content__link content__link_type_email"
+                            href="mailto:dianadomino24@gmail.com"
+                        >
+                            dianadomino24@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="footer__container"></div>
+            </footer>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
