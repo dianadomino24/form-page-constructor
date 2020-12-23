@@ -18,7 +18,7 @@ https://dianadomino24.github.io/form-page-constructor/
 
 ## :rocket: Technologies
 
--   **JavaScript ES6** - Promises, setTimeOut.
+-   **JavaScript ES6**
 
 -   semantic **HTML5**, styles - **CSS3** including Flexbox.
 
